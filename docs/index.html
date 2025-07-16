@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan P. González</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Presentación</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animación para aparecer las imágenes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <main class="min-h-screen flex items-center justify-center p-6">
-    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      
-      <!-- Imagen de perfil -->
-      <div class="flex justify-center md:justify-start">
-        <img src="photo5.jpg" alt="Foto de perfil" class="rounded-full w-48 h-48 object-cover border-4 border-indigo-500">
-      </div>
-      
-      <!-- Información personal -->
-      <div>
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">Juan Pablo González T</h1>
-        <p class="text-indigo-600 text-xl mb-4">Ingeniero de Sistemas y Computación</p>
-        <p class="text-gray-600 mb-4">
-          Desarrollador fullstack apasionado por crear soluciones digitales efectivas. Con experiencia en desarrollo web, bases de datos y administracion de sistemas de informacion.
-        </p>
-        
-        <!-- Redes sociales -->
-        <div class="flex gap-4 mb-4">
-          <a href="https://github.com/juanpablogt" target="_blank" class="text-gray-500 hover:text-black">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.31-1.28-1.66-1.28-1.66-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.03 1.77 2.69 1.26 3.34.96.1-.75.4-1.26.72-1.56-2.56-.29-5.26-1.29-5.26-5.75 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.51.12-3.15 0 0 .97-.31 3.18 1.19a10.93 10.93 0 0 1 5.8 0c2.21-1.5 3.18-1.19 3.18-1.19.64 1.64.24 2.85.12 3.15.75.82 1.2 1.85 1.2 3.12 0 4.47-2.7 5.46-5.27 5.75.42.37.77 1.11.77 2.24 0 1.62-.01 2.93-.01 3.33 0 .31.21.66.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/juan-pablo-gonzalez-trejos-90025b337/" target="_blank" class="text-blue-600 hover:text-blue-800">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.5 1.12 2.5 2.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.7-1.2 2.3-2.5 4.7-2.5 5 0 5.9 3.3 5.9 7.5V24h-5v-6.7c0-1.6-.03-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V24h-5V8z"/></svg>
-          </a>
-        </div>
-        
-        <!-- Botón de contacto -->
-        <a href="mailto:juapabgonzalez@utp.edu.co" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">
-          Contáctame
-        </a>
-      </div>
-    </div>
+
+<body class="bg-gradient-to-b from-sky-100 via-white to-indigo-100 min-h-screen text-gray-800">
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">Mi Presentación 📸</h1>
+
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Repite esta estructura para cada imagen -->
+      <figure class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 reveal">
+        <img src="./pics/imagenes/photo1.jpg" alt="photo1JP" class="w-full h-64 object-cover">
+        <figcaption class="p-4 text-sm text-gray-700">
+          Con el phD Juan Diego Gómez Valencia trabajando en un proyecto de IA para análisis de datos de Univirtual UTP.
+        </figcaption>
+      </figure>
+
+      <figure class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 reveal">
+        <img src="./pics/imagenes/photo2.jpg" alt="photo2JP" class="w-full h-64 object-cover">
+        <figcaption class="p-4 text-sm text-gray-700">
+          En clase de Inglés 2025.
+        </figcaption>
+      </figure>
+
+      <figure class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 reveal">
+        <img src="./pics/imagenes/photo3.jpg" alt="photo3JP" class="w-full h-64 object-cover">
+        <figcaption class="p-4 text-sm text-gray-700">
+          Un día normal en la oficina 2025.
+        </figcaption>
+      </figure>
+
+      <figure class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 reveal">
+        <img src="./pics/imagenes/photo4.jpg" alt="photo4JP" class="w-full h-64 object-cover">
+        <figcaption class="p-4 text-sm text-gray-700">
+          Realizando prácticas universitarias en Univirtual UTP 2024-2025.
+        </figcaption>
+      </figure>
+
+      <figure class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 reveal">
+        <img src="./pics/imagenes/photo5.jpg" alt="photo5JP" class="w-full h-64 object-cover">
+        <figcaption class="p-4 text-sm text-gray-700">
+          Clase de Comunicaciones-III UTP 2024.
+        </figcaption>
+      </figure>
+    </section>
   </main>
+
+  <!-- JS para animar imágenes al hacer scroll -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      for (let i = 0; i < reveals.length; i++) {
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
 </body>
+
 </html>
